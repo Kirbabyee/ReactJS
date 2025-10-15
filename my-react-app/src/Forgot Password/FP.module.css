@@ -1,0 +1,152 @@
+*{ /* Reset to 0 the margin and padding of all components */
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Arial;
+}
+
+/* FORM */
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Images/LP No Text.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 59.6rem;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(43, 43, 43, 0.582);
+    width: 20rem;
+    height: 23rem;
+    gap: 12px;
+    color: white;
+    border-radius: 10px;
+    padding: .5rem;
+}
+.form i{
+    font-size: 150px;
+}
+.form input{
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+    outline-width: 0;
+}
+.form p{
+    font-weight: bold;
+    font-size: 12px;
+}
+.form button{
+    border-radius: 50px;
+    padding: .5rem;
+    border: none;
+    background-color: #9c180e;
+    color: white;
+    margin-top: 40px;
+    cursor: pointer;
+    width: 150px;
+}
+.form a{
+    color: white;
+    font-size: 10px;
+}
+
+/* NEW PASSWORD FORM */
+.NewPassword_Body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Images/LP No Text.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 59.6rem;
+}
+.NewPassword_Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 28rem;
+    background-color: rgba(43, 43, 43, 0.582);
+    gap: 12px;
+    color: white;
+    border-radius: 10px;
+    padding: .5rem;
+}
+.NewPassword_Form i{
+    font-size: 150px;
+}
+.NewPassword_Form input{
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    outline-width: 0;
+}
+.NewPassword_Form button{
+    border-radius: 50px;
+    padding: .5rem;
+    border: none;
+    background-color: #9c180e;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 150px;
+}
+.NewPassword_Form a{
+    color: white;
+    font-size: 10px;
+}
+.NewPassword_ShowPassword{
+    display: flex;
+    gap: 5px;
+    margin-left: 100px;
+}
+.NewPassword_ShowPassword input{
+    cursor: pointer;
+}
+.NewPassword_ShowPassword label{
+    font-size: 10px;
+}
+
+
+
+@media (max-width: 600px) { /* Adjust the form size on 600px resolution screen */
+    .form{
+        width: 15rem;
+        height: 20rem;
+    }
+    .NewPassword_Form i{
+        font-size: 140px;
+    }
+    .NewPassword_Form{
+        height: 25rem;
+        width: 18rem;
+    }
+}
+
+@media (max-width: 400px) { /* Adjust the form size on 400px resolution screen */
+    .form{
+        width: 15rem;
+        height: 18rem;
+    }
+    .form button{
+        margin-top: 20px;
+    }
+    .form i{
+        font-size: 100px;
+    }
+    .NewPassword_Form i{
+        font-size: 120px;
+    }
+    .NewPassword_Form{
+        height: 23rem;
+        width: 16rem;
+    }
+    .NewPassword_Form input{
+        font-size: 12px;
+    }
+}
