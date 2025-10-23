@@ -1,9 +1,9 @@
-import Landing_Page from './Landing Page/Landing_Page.jsx'
+import Login from './Login/Login.jsx';
 
 function App() {
 	return(
 		<>
-			<Landing_Page/>
+			<Login />
 		</>
 	)
 }

@@ -1,0 +1,320 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Inter, Arial;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    height: 80px;
+    padding: .5rem 1rem;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+.right_section{
+    display: flex;
+    align-items: center;
+}
+
+
+.logo_no_text{
+    width: 100px;
+}
+.logo_text{
+    width: 150px;
+}
+
+.logo_transparent{
+    display: none;  /* Hide the other logo for responsive purposes */
+}
+
+/* FORM */
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../Images/LP No Text.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+.form_container{
+    background-color: white;
+    height: 30rem;
+    width: 25%;
+    padding: 5rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.form_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.form_header i{
+    font-size: 2.5em;
+    font-weight: 300;
+    width: 60px;
+    padding: .1em;
+    background: linear-gradient(to bottom right, #d20a10, #F8E382 80%);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+.form_header h3{
+    font-weight: 400;
+    font-size: 20px;
+}
+.form_header p{
+    font-weight: 300;
+    font-size: 12px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+}
+.form input{
+    width: 22rem;
+    outline-width: 0;
+    padding: .8rem;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.input{
+    position: relative;
+}
+.input i{
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    color: grey;
+    cursor: pointer;
+    font-size: 18px;
+}
+.input label{
+    font-size: 14px;
+    margin-left: 6px;
+    font-weight: 400;
+}
+.others{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 23rem;
+    margin-top: 10px;
+}
+.remember_me{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    vertical-align: middle;
+    gap: 2px;
+}
+.remember_me input{
+    cursor: pointer;
+}
+.forgot_password a{
+    font-size: 12px;
+    color: #d20a10;
+    text-decoration: none;
+}
+.login_btn{
+    margin-top: 30px;
+}
+.login_btn button{
+    padding: .5em;
+    width: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    background-color: #d20a10;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+}
+.login_btn button i{
+    font-size: 2em;
+}
+.note{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 1em;
+    width: 22rem;
+    background-color: #fcf4d4;
+    border-radius: 10px;
+    color: #d20a10;
+    opacity: .6;
+}
+.note p{
+    font-size: 11px;
+}
+
+@media (max-width: 1200px) {
+    .form_container{
+        height: 28rem;
+    }
+    .form input{
+        width: 18rem;
+    }    
+    .others{
+        width: 18rem;
+    }
+    .login_btn button{
+        width: 20rem;
+    }
+    .note{
+        width: 18rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .form_container{
+        height: 28rem;
+    }
+    .form_header{
+        width: 15rem;
+    }
+    .form_header i{
+        width: 50px;
+        font-size: 1.8rem;
+        padding: .3rem;
+    }
+    .form_header h3{
+        font-size: 18px;
+    }
+    .form_header p{
+        font-size: 10px;
+    }
+    .form input{
+        width: 15rem;
+    }    
+    .others{
+        width: 15rem;
+    }
+    .login_btn button{
+        width: 17rem;
+        font-size: smaller;
+    }
+    .note{
+        width: 15rem;
+    }
+}
+
+@media (max-width: 600px) { /* Adjust the design according to the resolution  */
+    .logo_transparent{
+        display: block;
+        width: 80px;
+    }
+    .logo_no_text,
+    .logo_text{
+        display: none;
+    }
+    .form_container{
+        height: 25rem;
+        padding: 3rem 5rem;
+    }
+    .form_header{
+        width: 15rem;
+        margin-bottom: 30px;
+    }
+    .form_header i{
+        width: 50px;
+        font-size: 1.8rem;
+        padding: .3rem;
+    }
+    .form_header h3{
+        font-size: 18px;
+    }
+    .form_header p{
+        font-size: 10px;
+    }
+    .form input{
+        width: 15rem;
+    }    
+    .others{
+        width: 15rem;
+    }
+    .login_btn button{
+        width: 17rem;
+        font-size: smaller;
+    }
+    .note{
+        width: 15rem;
+    }
+}
+
+@media (max-width: 500px) { /* Adjust the design according to the resolution  */
+    .logo_transparent{
+        display: block;
+        width: 80px;
+    }
+    .logo_no_text,
+    .logo_text{
+        display: none;
+    }
+    .form_container{
+        height: 25rem;
+        padding: 3rem 5rem;
+    }
+    .form_header{
+        width: 15rem;
+        margin-bottom: 30px;
+    }
+    .form_header i{
+        width: 50px;
+        font-size: 1.8rem;
+        padding: .3rem;
+    }
+    .form_header h3{
+        font-size: 14px;
+    }
+    .form_header p{
+        font-size: 10px;
+    }
+    .form input{
+        width: 13rem;
+    }    
+    .input{
+        font-size: 12px;
+    }
+    .others{
+        margin-top: 15px;
+        width: 13rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .login_btn button{
+        margin-top: -5px;
+        width: 13rem;
+        padding: .8em;
+        font-size: 12px;
+    }
+    .login_btn button i{
+        display: none;
+    }
+    .note{
+        width: 12rem;
+        font-size: 10px;
+    }
+    .note p{
+        font-size: 9px;
+    }
+}

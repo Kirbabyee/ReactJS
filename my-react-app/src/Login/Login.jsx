@@ -1,7 +1,8 @@
-import Header from './Lp_Header.jsx';
-import Form from './Lp_Form.jsx';
+import Header from './Header.jsx';
+import Form from './Form.jsx';
 
 function Login() {
+
     return(
         <div>
             <Header />
