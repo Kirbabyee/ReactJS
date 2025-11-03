@@ -1,5 +1,6 @@
 import Style from './index.module.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Form() {
     const [showPassword, isShowPassword] = useState(false);
@@ -35,10 +36,12 @@ function Form() {
                     </div>
                 </div>
                 <div className={Style.login_btn}>
-                    <button>
-                        <i class='bxr  bx-lock'></i>
-                        Sign In to Admin Panel
-                    </button>
+                    <Link to={"/Dashboard"} className={Style.link}>
+                        <button>
+                            <i class='bxr  bx-lock'></i>
+                            Sign In to Admin Panel
+                        </button>
+                    </Link>
                 </div>
                 <div className={Style.note}>
                     <i class='bxr  bx-alert-circle'></i> 

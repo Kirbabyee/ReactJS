@@ -121,7 +121,6 @@ header{
     display: flex;
     align-items: center;
     font-size: 12px;
-    vertical-align: middle;
     gap: 2px;
 }
 .remember_me input{
@@ -165,6 +164,9 @@ header{
 }
 .note p{
     font-size: 11px;
+}
+.link{
+    text-decoration: none;
 }
 
 @media (max-width: 1200px) {
