@@ -9,13 +9,17 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: right;
+    align-items: center;
     gap: 50px;
-    padding: 1.2em;
     position: absolute;
     top: 0;
     bottom: 0;
     color: #535353;
     font-weight: 500;
+}
+.logo,
+.sidenav{
+    margin: 0 1.2em;
 }
 .logo img{
     width: 10em;
@@ -33,20 +37,50 @@ nav{
     transition: background-color .15s, color .15s;
     cursor: pointer;
 }
+.burger_menu{
+    font-size: 2em;
+    display: none;
+}
+.link{
+    text-decoration: none;
+    color: #535353;
+}
+.admin_container{
+    margin-top: 300px;
+    border-top: 2px solid;
+    padding-top: 10px;
+}
+.admin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.admin i{
+    font-size: 3em;
+}
+.admin div span{
+    font-size: smaller;
+}
 
 /* Highlight the nav that is clicked */
 .active{
     background-color: #cd401b;
     color: white;
 }
+.active_nav{
+    display: block;
+    width: 12em;
+}
 
 /* DASHBOARD */
 .dashboard{
     height: 55.5em;
     background-color: #f9fafb;
-    margin-left: 15em;
+    margin-left: 14em;
     padding: 2em;
 }
+
 /* Header */
 .dashboard_header{
     display: flex;
@@ -198,6 +232,280 @@ nav{
     font-size: 22px;
 }
 .activity span{
-    opacity: .5;
+    color: grey;
     font-size: 14px;
+}
+
+
+/* Sidebar responsiveness */
+@media (max-width: 700px) {
+    .dashboard{
+        margin-left: 0;
+    }
+    .logo,
+    .sidenav,
+    .admin_container{
+        display: none;
+    }
+    .burger_menu{
+        display: block;
+        position: absolute;
+        top: 36px;
+        left: 5px;
+        font-size: 1.5em;
+    }
+    nav{
+        height: 64em;
+    }
+    nav .active_menu{
+        display: block;
+    }
+    .logo{
+        margin-top: 50px;
+    }
+}
+
+/* Dashboard responsiveness */
+@media (max-width: 1000px) {
+    .dashboard{
+        height: 65em;
+        margin-left: 12em;
+    }
+    .status{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .summary_box{
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 700px) {
+    .dashboard{
+        margin-left: 0;
+    }
+}
+@media (max-width: 410px) {
+    .dashboard{
+        height: 70em;
+    }
+    .attendance_summary_container{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ANALYTICS */
+.analytics{
+    height: 55.5em;
+    background-color: #f9fafb;
+    margin-left: 15em;
+    padding: 2em;
+}
+.analytics_header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.analytics_header p{
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+}
+.analytics_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    margin-top: 30px;
+}
+.stats_box{
+    width: 13em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 1em;
+    flex: 1;
+}
+.stats_box h5{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.stats_box p{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.stats_box span{
+    font-size: 12px;
+}
+
+
+/* EMPLOYEES */
+.employees{
+    height: 55.5em;
+    background-color: #f9fafb;
+    margin-left: 15em;
+    padding: 2em;
+}
+.employees_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.employees_header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.employees_header p{
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+}
+.employees_container{
+    width: 94%;
+    border: 1px solid;
+    padding: 1.5em 2em;
+    margin-top: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.employees_container h2{
+    margin-left: 50px;
+}
+.employees_searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.employees_searchbar input{
+    padding: .8em;
+    width: 30em;
+    outline-width: 0;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.employees_searchbar select{
+    padding: .8em;
+    outline-width: 0;
+    background-color: #212837;
+    color: white;
+    border-radius: 5px;
+}
+/* Table */
+table{
+    width: 100%;
+}
+table, th, td{
+    border-collapse: collapse;
+    padding: 1em;
+    text-align: center;
+}
+th{
+    background-color: rgb(236, 236, 236);
+}
+td i{
+    font-size: 2em;
+    vertical-align: middle;
+}
+.actions_button{
+    position: relative;
+}
+.actions_button i:hover{
+    cursor: pointer;
+}
+.actions{
+    position: absolute;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: left;
+    background-color: white;
+    display: none;
+    width: 95%;
+    left: 0;
+    z-index: 1;
+}
+.actions ul{
+    list-style-type: none;
+}
+.actions li{
+    padding: 1em;
+}
+.actions li:hover{
+    color: #cd401b;
+    cursor: pointer;
+}
+.actions li i{
+    font-size: 20px;
+}
+.actionsActive{
+    display: block;
+}
+
+@media (max-width: 1400px) {
+    .actions li{
+        font-size: 12px;
+    }
+    .actions li i{
+        font-size: 15px;
+    }
+}
+@media (max-width: 1000px) {
+    .logo img{
+        width: 8em;
+    }
+    .employees{
+        margin-left: 12em;
+    }
+    .sidenav{
+        font-size: 1em;
+    }
+    .admin_container{
+        margin-top: 430px;
+        font-size: .8em;
+    }
+    table{
+        overflow-x: auto;
+        font-size: 15px;
+    }
+}
+@media (max-width: 820px) {
+    table{
+        font-size: 13px;
+    }
+}
+@media (max-width: 750px) {
+    table{
+        font-size: 12px;
+    }
+}
+@media (max-width: 700px) {
+    .employees{
+        height: 95vh;
+        margin-left: 0;
+        font-size: small;
+    }
+    .employees_header{
+        margin-left: 20px;
+    }
+    table{
+        width: 100%;
+        font-size: 14px;
+    }
+}
+@media (max-width: 600px) {
+    .employees{
+        font-size: 12px;
+        height: 95vh;
+    }
+    table{
+        font-size: 10px;
+    }
 }

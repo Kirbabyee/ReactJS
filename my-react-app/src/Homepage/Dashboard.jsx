@@ -11,7 +11,7 @@ function Dashboard(){
 
     return(
         <>
-            <Sidebar />
+            <Sidebar dashboard="true"/>
             <div className={Style.dashboard}>
                 {/* Header */}
                 <div className={Style.dashboard_header}>
@@ -85,34 +85,6 @@ function Dashboard(){
                                 <div>
                                     <p>Kirby Prado clocked in</p>
                                     <span className={Style.timestamp}> 5 mins ago</span>
-                                </div>
-                            </div>
-                            <div  className={Style.activity}>
-                                <i class='bxr  bx-clock-4'  ></i> 
-                                <div>
-                                    <p>Niel Andulan submitted leave request</p>
-                                    <span className={Style.timestamp}> 16 mins ago</span>
-                                </div>
-                            </div>
-                            <div className={Style.activity}>
-                                <i class='bxr  bx-clock-4'  ></i> 
-                                <div>
-                                    <p>Michael Orias clocked out</p>
-                                    <span className={Style.timestamp}> 50 mins ago</span>
-                                </div>
-                            </div>
-                            <div className={Style.activity}>
-                                <i class='bxr  bx-clock-4'  ></i> 
-                                <div>
-                                    <p>Jony Bulan clocked out</p>
-                                    <span className={Style.timestamp}> 1 hr ago</span>
-                                </div>
-                            </div>
-                            <div className={Style.activity}>
-                                <i class='bxr  bx-clock-4'  ></i> 
-                                <div>
-                                    <p>Christine Acosta approved for leave</p>
-                                    <span className={Style.timestamp}> 10 mins ago</span>
                                 </div>
                             </div>
                         </div>
