@@ -110,7 +110,7 @@ function Analytics() {
                                             {dateSelected ? dateSelect : 'Select Date'} 
                                             <i class='bxr  bx-calendar-detail' ></i> 
                                         </button>
-                                        <div className={`${datePick ? Style.select_date : ''} ${Style.date_range}`}> 
+                                        <div className={`${datePick ? Style.select_date : ''} ${Style.date_range}`} style={{right: "-150px"}}> 
                                             <Calendar /* Date picker for charts */
                                                 date={dateSelect}
                                                 onChange={handleSelect}
@@ -177,7 +177,7 @@ function Analytics() {
                                             {dateRanged ? `${format(date.startDate, 'MM-dd-yyyy')} to ${format(date.endDate, 'MM-dd-yyyy')}` : 'Select Date' /* Display the selected date if date is selected */} 
                                             <i class='bxr  bx-calendar-detail' ></i> 
                                         </button>
-                                        <div className={`${rangeDate ? Style.select_date : ''} ${Style.date_range}`}> 
+                                        <div className={`${rangeDate ? Style.select_date : ''} ${Style.date_range}`} > 
                                             <DateRange /* Date picker for charts */
                                                 ranges={[date]}
                                                 onChange={handleRange}

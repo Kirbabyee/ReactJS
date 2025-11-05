@@ -8,8 +8,9 @@ import { Calendar, DateRange } from "react-date-range";
 import { addDays, format } from "date-fns";
 
 function Dashboard(){
-    const [datePick, isDatePick] = useState(false);
-    const [dateSelect, isDateSelect] = useState(new Date());
+    const [openCalendar, isOpenCalendar] = useState(false);
+    const [dateSelect, isDateSelect] = useState(new Date()); /* Get the selected date */
+
     const [dateSelected, isDateSelected] = useState(false);
 
     const handleSelect = (date) => {
@@ -27,11 +28,11 @@ function Dashboard(){
                         <h3>Dashboard</h3>
                     </div>
                     <div className={Style.request_date_picker}>
-                        <button className={Style.request_date_picker_btn} onClick={() => isDatePick(!datePick)} style={{backgroundColor: "#f9fafb"}}>
+                        <button className={Style.request_date_picker_btn} onClick={() => isOpenCalendar(!openCalendar)} style={{backgroundColor: "#f9fafb"}}>
                             {dateSelected ? dateSelect : 'Select Date' /* Display the selected date if date is selected */} 
                             <i class='bxr  bx-calendar-detail' ></i> 
                         </button>
-                        <div className={`${datePick ? Style.select_date : ''} ${Style.date_range}`} style={{right: "50px"}}> 
+                        <div className={`${openCalendar ? Style.select_date : ''} ${Style.date_range}`} style={{position: "absolute",right: "50px"}}> 
                             <Calendar /* Date picker for charts */
                                 date={dateSelect}
                                 onChange={handleSelect}

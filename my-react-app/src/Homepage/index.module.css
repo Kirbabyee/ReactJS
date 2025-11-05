@@ -400,9 +400,7 @@ nav{
 }
 .date_range{
     display: none;
-    margin-left: 100px;
-    position: absolute;
-    right: 90px;
+    margin-left: 120px;
 }
 .select_date{
     display: block;
@@ -752,4 +750,110 @@ td i{
 .request_date i{
     font-size: 18px;
     color: red;
+}
+
+/* LEAVE HISTORY */
+.leave_history{
+    height: 55.5em;
+    background-color: #f9fafb;
+    margin-left: 15em;
+    padding: 2em;
+}
+.leave_history_header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.leave_history_header p{
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+}
+.leave_history_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin-top: 50px;
+    padding: 2em;
+    height: 45em;
+    border-radius: 10px;
+}
+/* Search bar */
+.leave_history_search_bar_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90em;
+}
+.leave_history_search_bar{
+    width: 27em;
+    border-bottom: 1px solid;
+}
+.leave_history_search_bar input{
+    border: none;
+    width: 90%;
+    padding: 1em;
+    outline-width: 0;
+}
+/* Approved Pending Denied */
+.approved_pending_denied{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.2em;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.approved i{
+    color: green;
+    background-color: green;
+    border-radius: 50px;
+}
+.denied i{
+    color: red;
+    background-color: red;
+    border-radius: 50px;
+}
+.pending i{
+    color: orange;
+    background-color: orange;
+    border-radius: 50px;
+}
+/* History */
+.history_container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90em;
+    background-color: #f9fafb;
+    padding: 2.3em;
+    border-radius: 20px;
+    height: 32em;
+    overflow-y: auto;
+    gap: 20px;
+}
+.request_status{
+    margin-left: 11em;
+    margin-bottom: 3em;
+    font-size: 12px;
+    padding: .3em 0em;
+    border-radius: 10px;
+    width: 6em;
+    text-align: center;
+}
+.request_approved{
+    background-color: green;
+    color: white;
+}
+.request_denied{
+    background-color: red;
+    color: white;
+}
+.request_pending{
+    background-color: orange;
+    color: white;
 }

@@ -44,7 +44,7 @@ function Leave_Request() {
                                     {dateRanged ? `${format(date.startDate, 'MM-dd-yyyy')} to ${format(date.endDate, 'MM-dd-yyyy')}` : 'Select Date' /* Display the selected date if date is selected */} 
                                     <i class='bxr  bx-calendar-detail' ></i> 
                                 </button>
-                                <div className={`${rangeDate ? Style.select_date : ''} ${Style.date_range}`}> 
+                                <div className={`${rangeDate ? Style.select_date : ''} ${Style.date_range}`} style={{position: "absolute" ,right: "50px"}}> 
                                     <DateRange /* Date picker for charts */
                                         ranges={[date]}
                                         onChange={handleRange}
