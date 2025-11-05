@@ -1,5 +1,6 @@
 import Sidebar from "./Sidebar.jsx";
 import Style from "./index.module.css";
+import userPhoto from "../Images/user.jpg";
 import { useState } from "react";
 
 function Employees() {
@@ -43,7 +44,10 @@ function Employees() {
                         <h2>All Employees</h2>
                         <hr />
                         <div className={Style.employees_searchbar}>
-                            <input type="text" placeholder="Search Employee by name,role,ID or any related keywords"/>
+                            <div>   
+                                <input type="text" placeholder="Search Employee by name,role,ID or any related keywords"/>
+                                <i class='bxr  bx-search'></i> 
+                            </div>
                             <select name="" id="">
                                 <option value="" disabled selected hidden>Status</option>
                                 <option value="">Inactive</option>
@@ -60,8 +64,8 @@ function Employees() {
                                     <th>Request</th>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <i class='bxr  bx-user-circle'></i> 
+                                    <td className={Style.name}>
+                                        <img src={userPhoto} alt="" />
                                         John Doe
                                     </td>
                                     <td>Chef</td>

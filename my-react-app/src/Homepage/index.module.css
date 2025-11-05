@@ -471,13 +471,14 @@ nav{
 }
 .employees_container{
     width: 94%;
-    border: 1px solid;
+    height: 46em;
     padding: 1.5em 2em;
     margin-top: 50px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: white;
 }
 .employees_container h2{
     margin-left: 50px;
@@ -487,12 +488,21 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+.employees_searchbar div{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    width: 26em;
+    margin-left: 30px;
+}
 .employees_searchbar input{
     padding: .8em;
     width: 30em;
     outline-width: 0;
-    border-radius: 5px;
-    border: 1px solid;
+    border: none;
+}
+.employees_searchbar i{
+    cursor: pointer;
 }
 .employees_searchbar select{
     padding: .8em;
@@ -516,6 +526,12 @@ th{
 td i{
     font-size: 2em;
     vertical-align: middle;
+}
+tr .name img{
+    width: 3em;
+    vertical-align: middle;
+    border-radius: 1.5em;
+    margin-right: 5px;
 }
 .actions_button{
     position: relative;
@@ -644,7 +660,7 @@ td i{
     gap: 30px;
     flex-direction: column;
     height: 46em;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .search_date{
     display: flex;
@@ -656,17 +672,17 @@ td i{
     display: flex;
     align-items: center;
     position: relative;
+    border-bottom: 1px solid;
     width: 28em;
 }
 .request_search_bar{
     width: 100%;
     padding: .8em;
     border: none;
-    border-bottom: 1px solid;
+    outline-width: 0;
 }
 .search_bar_container i{
-    position: absolute;
-    right: 0;
+    cursor: pointer;
 }
 .request_date_picker_btn{
     display: flex;
@@ -687,6 +703,7 @@ td i{
     padding: 2em;
     background-color: #f9fafb;
     overflow-y: auto;
+    border-radius: 30px;
 }
 .requests{
     display: flex;
@@ -758,11 +775,15 @@ td i{
     background-color: #f9fafb;
     margin-left: 15em;
     padding: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .leave_history_header{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-left: -82em;
 }
 .leave_history_header p{
     font-size: 14px;
@@ -777,6 +798,7 @@ td i{
     padding: 2em;
     height: 45em;
     border-radius: 10px;
+    width: 93em;
 }
 /* Search bar */
 .leave_history_search_bar_container{
@@ -792,7 +814,7 @@ td i{
 .leave_history_search_bar input{
     border: none;
     width: 90%;
-    padding: 1em;
+    padding: .8em;
     outline-width: 0;
 }
 /* Approved Pending Denied */
@@ -856,4 +878,211 @@ td i{
 .request_pending{
     background-color: orange;
     color: white;
+}
+
+/* SETTINGS */
+.settings{
+    height: 55.5em;
+    background-color: #f9fafb;
+    margin-left: 15em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.settings_header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: -81em;
+}
+.settings_header p{
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+}
+.settings_body{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 49em;
+    width: 97em;
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+/* Profile Information */
+.profile_information{
+    padding: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_information h3{
+    margin-left: -68em;
+}
+.profile_picture{
+    margin-top: 45px;
+    margin-left: -70em;
+}
+.profile_picture img{
+    width: 10em;
+    vertical-align: middle;
+    border-radius: 5em;
+}
+.profile_picture_details{
+    margin-left: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.profile_picture_details h3{
+    margin-left: 0;
+}
+.position{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.profile_picture button{
+    margin-top: 15px;
+    padding: .5em;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: white;
+    cursor: pointer;
+}
+.profile_picture button i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+hr{
+    margin-top: 50px;
+    width: 90em;
+}
+/* Profile Details */
+.profile_details{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+.profile_details div{
+    margin-left: 90px;
+}
+.profile_details div label{
+    font-size: 17px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.profile_details input{
+    font-size: 15px;
+    width: 70%;
+    padding: .5em;
+    border: none;
+    border-radius: .8em;
+    background-color: #f9fafb;
+}
+.save_changes_btn{
+    margin-top: 5em;
+    margin-left: 80em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: .7em;
+    border: none;
+    background-color: #cd401b;
+    color: white;
+    font-size: 16px;
+    width: 10em;
+}
+/* Change Password */
+.change_password{
+    padding: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+    gap: 50px;
+}
+.change_password h3{
+    margin-left: -68em;
+}
+.input_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 30px;
+    width: 100%;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input input{
+    padding: .7em;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    background-color: #f9fafb;
+    outline-width: 0;
+}
+.input label{
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: 500;
+}
+.show_password{
+    margin-left: 20px;
+    margin-top: -20px;
+}
+.show_password input,
+label{
+    vertical-align: middle;
+    font-size: 12px;
+}
+.show_password input{
+    margin-right: 5px;
+}
+.password_tooltip{
+    padding: 1em 1.5em;
+    width: 85em;
+    border: 1px solid #99caff;
+    background-color: #f1f8ff;
+}
+.password_tooltip p{
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.password_tooltip p i{
+    color: #0080ff;
+}
+.password_tooltip ul{
+    font-size: 12px;
+    color: #0080ff;
+    margin-left: 50px;
+    list-style-type: disc;
+}
+.password_tooltip ul li{
+    margin: 10px;
+}
+.update_password_btn{
+    margin-top: 1em;
+    margin-left: 80em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: .7em;
+    border: none;
+    background-color: #cd401b;
+    color: white;
+    font-size: 16px;
+    width: 12em;
 }

@@ -5,6 +5,7 @@ import Analytics from './Homepage/Analytics.jsx';
 import Employees from './Homepage/Employees.jsx';
 import LeaveReq from './Homepage/Leave_Request.jsx';
 import LeaveHis from './Homepage/Leave_History.jsx';
+import Settings from './Homepage/Settings.jsx';
 
 import { createRoot } from 'react-dom/client';
 import './index.css';
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   {path:"/Employees", element: <Employees />},
   {path:"/Leave Request", element: <LeaveReq />},
   {path:"/Leave History", element: <LeaveHis />},
+  {path:"/Settings", element: <Settings />}
 ]);
 
 createRoot(document.getElementById('root')).render(

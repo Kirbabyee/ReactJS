@@ -65,10 +65,12 @@ function Sidebar(props) {
                             Leave History
                         </div>
                     </Link>
-                    <div className={settingsActive ? Style.active : ""} onClick={() => isActive(isSettingsActive)}>
-                        <i class='bxr  bx-cog'  ></i> 
-                        Settings
-                    </div>
+                    <Link to={"/Settings"} className={Style.link}>
+                        <div className={settingsActive ? Style.active : ""} onClick={() => isActive(isSettingsActive)}>
+                            <i class='bxr  bx-cog'  ></i> 
+                            Settings
+                        </div>
+                    </Link>
                 </div>
                 <div className={`${burgerMenu ? Style.active_menu : ''} ${Style.admin_container}`}>
                     <div className={Style.admin}>
