@@ -53,14 +53,18 @@ function Sidebar(props) {
                             Employee
                         </div>
                     </Link>
-                    <div className={leaveReqActive ? Style.active : ""} onClick={() => isActive(isLeaveReqActive)}>
-                        <i class='bxr  bx-envelope-open'  ></i> 
-                        Leave Request
-                    </div>
-                    <div className={leaveHistoryActive ? Style.active : ""} onClick={() => isActive(isLeaveHistoryActive)}>
-                        <i class='bxr  bx-clock-4'  ></i> 
-                        Leave History
-                    </div>
+                    <Link to={"/Leave Request"} className={Style.link}>
+                        <div className={leaveReqActive ? Style.active : ""} onClick={() => isActive(isLeaveReqActive)}>
+                            <i class='bxr  bx-envelope-open'  ></i> 
+                            Leave Request
+                        </div>
+                    </Link>
+                    <Link to={"/Leave History"} className={Style.link}>
+                        <div className={leaveHistoryActive ? Style.active : ""} onClick={() => isActive(isLeaveHistoryActive)}>
+                            <i class='bxr  bx-clock-4'  ></i> 
+                            Leave History
+                        </div>
+                    </Link>
                     <div className={settingsActive ? Style.active : ""} onClick={() => isActive(isSettingsActive)}>
                         <i class='bxr  bx-cog'  ></i> 
                         Settings

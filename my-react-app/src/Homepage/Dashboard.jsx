@@ -2,11 +2,19 @@ import Sidebar from "./Sidebar.jsx";
 import Style from "./index.module.css";
 import { use, useState } from "react";
 
-function Dashboard(){
-    const [date, setSelectedDate] = useState();
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { Calendar, DateRange } from "react-date-range";
+import { addDays, format } from "date-fns";
 
-    function getDate(e){
-        setSelectedDate(e.target.value);
+function Dashboard(){
+    const [datePick, isDatePick] = useState(false);
+    const [dateSelect, isDateSelect] = useState(new Date());
+    const [dateSelected, isDateSelected] = useState(false);
+
+    const handleSelect = (date) => {
+        isDateSelect(format(date, 'MMM-dd-yyyy'));
+        isDateSelected(true); /* To display the selected date if the date is selected in select date*/
     }
 
     return(
@@ -18,8 +26,17 @@ function Dashboard(){
                     <div className={Style.date}>
                         <h3>Dashboard</h3>
                     </div>
-                    <div className={Style.date_selector}>
-                        <input type='date' onChange={getDate}/>
+                    <div className={Style.request_date_picker}>
+                        <button className={Style.request_date_picker_btn} onClick={() => isDatePick(!datePick)} style={{backgroundColor: "#f9fafb"}}>
+                            {dateSelected ? dateSelect : 'Select Date' /* Display the selected date if date is selected */} 
+                            <i class='bxr  bx-calendar-detail' ></i> 
+                        </button>
+                        <div className={`${datePick ? Style.select_date : ''} ${Style.date_range}`} style={{right: "50px"}}> 
+                            <Calendar /* Date picker for charts */
+                                date={dateSelect}
+                                onChange={handleSelect}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className={Style.dashboard_body}>

@@ -396,10 +396,13 @@ nav{
     gap: 10px;
     font-size: .8em;
     background-color: white;
+    cursor: pointer;
 }
 .date_range{
     display: none;
     margin-left: 100px;
+    position: absolute;
+    right: 90px;
 }
 .select_date{
     display: block;
@@ -444,6 +447,7 @@ nav{
     gap: 10px;
     font-size: .8em;
     background-color: white;
+    cursor: pointer;
 }
 
 /* EMPLOYEES */
@@ -549,6 +553,7 @@ td i{
     display: block;
 }
 
+/* Employee Responsiveness */
 @media (max-width: 1400px) {
     .actions li{
         font-size: 12px;
@@ -608,4 +613,143 @@ td i{
     table{
         font-size: 10px;
     }
+}
+
+/* LEAVE REQUEST */
+.leave_request{
+    height: 55.5em;
+    background-color: #f9fafb;
+    margin-left: 15em;
+    padding: 2em;
+}
+.leave_request_header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.leave_request_header p{
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+}
+.leave_request_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.request_container{
+    width: 94%;
+    background-color: white;
+    padding: 1.5em;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    height: 46em;
+    border-radius: 20px;
+}
+.search_date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90em;
+}
+.search_bar_container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 28em;
+}
+.request_search_bar{
+    width: 100%;
+    padding: .8em;
+    border: none;
+    border-bottom: 1px solid;
+}
+.search_bar_container i{
+    position: absolute;
+    right: 0;
+}
+.request_date_picker_btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    padding: .8em;
+    background-color: white;
+}
+/* Request Boxes */
+.requests_boxes{
+    width: 90em;
+    height: 37em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2em;
+    background-color: #f9fafb;
+    overflow-y: auto;
+}
+.requests{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+    align-items: center;
+    padding: 10px;
+    height: 25em;
+    gap: 10px;
+}
+.requestor{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1em;
+}
+.user_photo{
+    width: 4em;
+    border-radius: 2em;
+}
+.requestor div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.requestor div p{
+    font-size: large;
+}
+.request_type{
+    font-size: 11px;
+    font-weight: 500;
+    padding: .5em;
+    background-color: #f9fafb;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.requestor i{
+    margin-left: 7em;
+    font-size: 1.5em;
+}
+.request_message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fafb;
+    height: 60%;
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(97, 97, 97);
+}
+.request_date{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: -20em;
+}
+.request_date i{
+    font-size: 18px;
+    color: red;
 }
