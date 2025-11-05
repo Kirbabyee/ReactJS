@@ -373,7 +373,7 @@ nav{
     width: 80em;
     height: 36em;
     margin-left: 4em;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .bar_graph{
     width: 40em;
@@ -407,13 +407,14 @@ nav{
 .doughnut_graph{
     width: 20em;
     height: 20em;
+    margin-left: 10em;
 }
 
 /* Projected Charts */
 .projected_charts{
     padding: 3em;
     width: 90em;
-    height: 34em;
+    height: 30em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -424,7 +425,26 @@ nav{
 .projected_attendance{
     height: 20em;
 }
-
+.projected_salary{
+    position: relative;
+}
+.range_date{
+    position: absolute;
+    top: -5em;
+    left: -20em;
+}
+.bar_graph_date_btn{
+    margin-left: 16.5em;
+    margin-top: 10px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: .8em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .8em;
+    background-color: white;
+}
 
 /* EMPLOYEES */
 .employees{

@@ -11,8 +11,12 @@ import { addDays, format } from "date-fns";
 
 function Analytics() {
     const [datePick, isDatePick] = useState(false);
+
     const [rangeDate, isRangeDate] = useState(false);
-    const [dateChanged, isDateChanged] = useState(false);
+    const [dateRanged, isDateRanged] = useState(false);
+
+    const [dateSelect, isDateSelect] = useState(new Date());
+    const [dateSelected, isDateSelected] = useState(false);
 
     const [date, setDate] = useState({
         startDate: new Date(),
@@ -20,7 +24,7 @@ function Analytics() {
         key: 'selection'
     });
     
-    const getDateRangeLabels = (start, end) => {
+    const getDateRangeLabels = (start, end) => { /* To return all the selected date in range picker */
         const labels = [];
         let curr = start;
 
@@ -32,9 +36,14 @@ function Analytics() {
         return labels;
     };
 
-    const handleChange = (ranges) => {
+    const handleSelect = (date) => {
+        isDateSelect(format(date, 'MMM-dd-yyyy'));
+        isDateSelected(true); /* To display the selected date if the date is selected in select date*/
+    }
+
+    const handleRange = (ranges) => {
         setDate(ranges.selection);
-        isDateChanged(true); /* To display the selected date */
+        isDateRanged(true); /* To display the selected date if the date is ranged in range date*/
     }
 
     return(
@@ -71,7 +80,7 @@ function Analytics() {
                                 <div className={Style.bar_graph}>
                                      <Bar 
                                         data={{
-                                            labels: getDateRangeLabels(date.startDate, date.endDate) /* Display the selected dates as labels */,
+                                            labels: [dateSelected ? dateSelect : ''] /* Display only the date if it is selected */,
                                             datasets: [
                                                 {
                                                     label: "Present",
@@ -98,13 +107,13 @@ function Analytics() {
                                     />
                                     <div className={Style.date_picker}>
                                         <button className={Style.date_picker_btn} onClick={() => isDatePick(!datePick)}>
-                                            {dateChanged ? `` : 'Select Date' /* Display the selected date if date is selected */} 
+                                            {dateSelected ? dateSelect : 'Select Date'} 
                                             <i class='bxr  bx-calendar-detail' ></i> 
                                         </button>
                                         <div className={`${datePick ? Style.select_date : ''} ${Style.date_range}`}> 
                                             <Calendar /* Date picker for charts */
-                                                ranges={[date]}
-                                                onChange={handleChange}
+                                                date={dateSelect}
+                                                onChange={handleSelect}
                                             />
                                         </div>
                                     </div>
@@ -123,7 +132,7 @@ function Analytics() {
                                             plugins: {
                                                 title: {
                                                     display: true,
-                                                    text: `${format(date.startDate, 'MMM dd, yyyy')} - ${format(date.endDate, 'MMM dd, yyyy')}`,
+                                                    text: `${dateSelected ? dateSelect : ''}`, /* Display only the date if it is selected  */
                                                     position: "bottom"
                                                 },
                                             },
@@ -165,13 +174,13 @@ function Analytics() {
                                     />
                                     <div className={Style.range_date}>
                                         <button className={Style.bar_graph_date_btn} onClick={() => isRangeDate(!rangeDate)}>
-                                            {dateChanged ? `${format(date.startDate, 'MM,dd,yyyy')} - ${format(date.endDate, 'MM,dd,yyyy')}` : 'Select Date' /* Display the selected date if date is selected */} 
+                                            {dateRanged ? `${format(date.startDate, 'MM-dd-yyyy')} to ${format(date.endDate, 'MM-dd-yyyy')}` : 'Select Date' /* Display the selected date if date is selected */} 
                                             <i class='bxr  bx-calendar-detail' ></i> 
                                         </button>
                                         <div className={`${rangeDate ? Style.select_date : ''} ${Style.date_range}`}> 
                                             <DateRange /* Date picker for charts */
                                                 ranges={[date]}
-                                                onChange={handleChange}
+                                                onChange={handleRange}
                                             />
                                         </div>
                                     </div>
